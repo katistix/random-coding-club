@@ -1,29 +1,45 @@
 import './App.css';
+import { postari } from './data';
+
+
+function Click(){
+    alert("Hello World");
+}
+
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+    <div>
+        <h1>Blogul Meu</h1>
+        <p className='ciobri'>Ciobris</p>
+        <button className='btn' onClick={Click}>whatev</button>
+
+        <div className='postCont'>
+          {/* <Post title="Postare 1" desc="desc 1"/> */}
+          {/* <Post title="Postare 2" desc="desc 2"/> */}
+          {
+            postari.map((postare_curenta)=>{
+              return(
+                <Post title={postare_curenta.title} desc={postare_curenta.desc}/>
+              )
+            })
+          }
+        </div>
     </div>
   );
+
+}
+
+function Post(props) {
+  return(
+    <div className='post'>
+              <h2>{props.title}</h2>
+              <p>{props.desc}</p>
+            </div>
+  )
 }
 
 export default App;

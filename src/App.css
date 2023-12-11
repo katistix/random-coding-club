@@ -1,31 +1,21 @@
-.App {
-  text-align: center;
+.post{
+   background: #ddd;
+   border-radius: 8px;
+   padding: 4px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.postCont{
+  margin-top: 10px;
+  background: red;
+  padding: 8px;
+  display:flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  gap: 8px;
 
-.App-link {
-  color: #61dafb;
 }
-
-.heart {
-  color: #ff0000;
+.btn{
+  border-radius: 20px;
+  background-color: aquamarine;
 }
-
-.small {
-  font-size: 0.75rem;
+.ciobri{
+  font-size: 24px;
 }
